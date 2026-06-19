@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<robot name="pro1">
+
+  <!-- BASE -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(base).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(base).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- PVC1 -->
+  <link name="pvc1">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(pvc1fixed).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(pvc1fixed).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- SUCTION -->
+  <link name="suction">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(suction).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(suction).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- GRIP -->
+  <link name="grip">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(oppgrip).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(oppgrip).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- ROTATING PART -->
+  <link name="pvc2">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(pvc2).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(pvc2).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- CHAIN LINKS -->
+  <link name="chain1y">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain1y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain1y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain1r">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain1r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain1r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain2y">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain2y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain2y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain2r">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain2r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain2r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain3y">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain3y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain3y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain3r">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain3r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain3r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain4y">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain4y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain4y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain4r">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain4r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain4r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain5y">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain5y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain5y).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="chain5r">
+    <visual>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain5r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pro1/meshes/yaa(chain5r).stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- ==================== JOINTS ==================== -->
+
+  <joint name="joint_base_pvc" type="fixed">
+    <parent link="base_link"/>
+    <child link="pvc1"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="joint_pvc_suction" type="fixed">
+    <parent link="pvc1"/>
+    <child link="suction"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="joint_suction_grip" type="fixed">
+    <parent link="suction"/>
+    <child link="grip"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="joint_base_pvc2" type="revolute">
+    <parent link="base_link"/>
+    <child link="pvc2"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <joint name="joint_base_chain1y" type="fixed">
+    <parent link="base_link"/>
+    <child link="chain1y"/>
+    <origin xyz="1.825 0 -0.5775" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_chain1y_chain1r" type="revolute">
+    <parent link="chain1y"/>
+    <child link="chain1r"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <joint name="joint_chain1r_chain2y" type="fixed">
+    <parent link="chain1r"/>
+    <child link="chain2y"/>
+    <origin xyz="1.275 0 -0.025" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_chain2y_chain2r" type="revolute">
+    <parent link="chain2y"/>
+    <child link="chain2r"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <joint name="joint_chain2r_chain3y" type="fixed">
+    <parent link="chain2r"/>
+    <child link="chain3y"/>
+    <origin xyz="1.275 0 -0.025" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_chain3y_chain3r" type="revolute">
+    <parent link="chain3y"/>
+    <child link="chain3r"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <joint name="joint_chain3r_chain4y" type="fixed">
+    <parent link="chain3r"/>
+    <child link="chain4y"/>
+    <origin xyz="1.275 0 -0.025" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_chain4y_chain4r" type="revolute">
+    <parent link="chain4y"/>
+    <child link="chain4r"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <joint name="joint_chain4r_chain5y" type="fixed">
+    <parent link="chain4r"/>
+    <child link="chain5y"/>
+    <origin xyz="1.275 0 -0.025" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_chain5y_chain5r" type="revolute">
+    <parent link="chain5y"/>
+    <child link="chain5r"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- ==================== GAZEBO PLUGINS ==================== -->
+
+  <!-- This fixes the robot to the world so it doesnt fall -->
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>$(find pro1)/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <!-- Material colors for Gazebo (it ignores RViz colors) -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="chain1y">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="chain1r">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="chain2y">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="chain2r">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="chain3y">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="chain3r">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="chain4y">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="chain4r">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="chain5y">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="chain5r">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- ros2_control hardware interface — tells Gazebo which joints to control -->
+  <ros2_control name="pro1_system" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="joint_base_pvc2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint_chain1y_chain1r">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint_chain2y_chain2r">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint_chain3y_chain3r">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint_chain4y_chain4r">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint_chain5y_chain5r">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+</robot>
